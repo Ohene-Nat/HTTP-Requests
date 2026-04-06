@@ -14,6 +14,15 @@ app.get("/contact", (req, res) => {
   res.send("<h1>Contact Me</h1><p>email: nathaniel@example.com</p>");
 });
 
+app.get("/products", (req, res) => {
+  const products = [
+    { id: 1, name: "Product A", price: 10 },
+    { id: 2, name: "Product B", price: 20 },
+    { id: 3, name: "Product C", price: 30 },
+  ];
+  res.json(products);
+});
+
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
