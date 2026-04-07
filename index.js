@@ -27,6 +27,10 @@ app.get("/services", (req, res) => {
   res.send("<h1>Our Services</h1><ul><li>Web Development</li><li>Mobile App Development</li><li>SEO Optimization</li></ul>");
 });
 
+app.get("/blog", (req, res) => {
+  res.send("<h1>Blog</h1><p>Welcome to our blog! Stay tuned for updates.</p>");
+});
+
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
